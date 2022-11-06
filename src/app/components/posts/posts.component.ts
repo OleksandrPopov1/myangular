@@ -10,6 +10,7 @@ import {PostService} from "../../services/post.service";
 export class PostsComponent implements OnInit {
 
   posts: IPost[];
+  selectedPost: IPost;
 
   constructor(private postService: PostService) { }
 
@@ -17,4 +18,7 @@ export class PostsComponent implements OnInit {
     this.postService.getPosts().subscribe(value => this.posts = value);
   }
 
+  getPost(post: IPost): void {
+    this.selectedPost = post;
+  }
 }

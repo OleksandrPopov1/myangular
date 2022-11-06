@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
   }
 
 
-  getUser(user: IUser) {
+  getUser(user: IUser): void {
     this.selectedUser = user;
   }
 }
